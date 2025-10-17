@@ -2,7 +2,7 @@
 {
     "id": "lssd_incident_report",
     "title": "Incident Report",
-    "description": "Generate a standard LSSD incident report.",
+    "description": "Создать отчет об инциденте | LSSD.",
     "icon": "FileText",
     "icon_color": "#10b981",
     "output_title": "[IR] {{incident_title}}, {{reporting_district}} - {{general.date}}",
@@ -10,46 +10,46 @@
     "output": "[font=Arial][color=black]\n\n[center][img]https://i.imgur.com/LEWTXbL.png[/img]\n\n[size=125][b]SHERIFF'S DEPARTMENT\nCOUNTY OF LOS SANTOS[/b]\n[i]\"A Tradition of Service Since 1850\"[/i][/size]\n\n[size=110][u]INCIDENT REPORT[/u][/size][/center][hr][/hr]\n\n[font=arial][color=black][indent][size=105][b]Filing Information[/b][/size]\n\n[indent]\n[b]Time & Date:[/b] {{general.time}}, {{general.date}}\n[b]Penal Code:[/b] {{#each charges}}{{#with (lookup @root.penalCode this.chargeId)}}{{this.type}}{{../this.class}} {{this.id}}. {{this.charge}}{{/with}}{{#unless @last}}, {{/unless}}{{/each}}\n[b]Location:[/b] {{location.street}}, {{location.district}}\n\n[b]Filed By:[/b] {{#each officers}}{{this.rank}} {{this.name}}{{#unless @last}}, {{/unless}}{{/each}}\n[b]Unit Number:[/b] {{general.callSign}}\n[/indent]\n\n[size=105][b]Involved Persons[/b][/size]\n[indent]{{#each persons}}\n[u]Person #{{@index_1}} - {{this.name}}[/u]\n[b]Classification:[/b] {{this.classification}}\n[b]Age:[/b] {{this.age}}\n[b]Phone Number:[/b] {{this.phone}}\n[b]Residence:[/b] {{this.residence}}\n[b]Relation to Incident:[/b] {{this.relation}}\n{{/each}}[/indent]\n\n[size=105][b]Narrative[/b][/size]\n[indent]{{narrative}}[/indent]\n\n[size=105][b]Evidence[/b][/size]\n\n{{#each photographs}}[altspoiler=\"EXHIBIT Photograph {{@index_1}}\"][img]{{this.link}}[/img][/altspoiler]\n{{/each}}{{#each evidence_descriptions}}[indent]{{this.description}}[/indent]\n{{/each}}[/indent][/color][/font]",
     "form": [
         { "type": "hidden", "name": "generatorType", "value": "IncidentReport" },
-        { "type": "section", "title": "General Section" },
+        { "type": "section", "title": "Основная секция" },
         { "type": "general", "name": "general" },
-        { "type": "section", "title": "Deputy Section" },
+        { "type": "section", "title": "Сотрудники" },
         { "type": "officer", "name": "officers", "multi": true },
-        { "type": "section", "title": "Location Details" },
+        { "type": "section", "title": "Локация" },
         { "type": "location", "name": "location", "showDistrict": true },
-        { "type": "dropdown", "name": "reporting_district", "label": "Reporting District of Incident", "placeholder": "Select Reporting District", "options": ["Area of Davis", "Area of Senora"], "required": true },
-        { "type": "section", "title": "Involved Persons" },
+        { "type": "dropdown", "name": "reporting_district", "label": "Сообщающий о происшествии район", "placeholder": "Выберите отчетный район", "options": ["Район Дэвиса", "Район Сеноры"], "required": true },
+        { "type": "section", "title": "Вовлеченные лица" },
         {
             "type": "input_group",
             "name": "persons",
-            "label": "Involved Person",
+            "label": "Вовлеченные лица",
             "fields": [
-                { "type": "text", "name": "name", "label": "Full Name", "placeholder": "Firstname Lastname", "required": true },
-                { "type": "dropdown", "name": "classification", "label": "Classification", "options": ["Victim", "Suspect", "Witness", "Informant"], "required": true },
-                { "type": "text", "name": "age", "label": "Age", "placeholder": "##" },
-                { "type": "text", "name": "phone", "label": "Phone Number", "placeholder": "#######" },
-                { "type": "text", "name": "residence", "label": "Residence", "placeholder": "1000 Grove Street" },
-                { "type": "text", "name": "relation", "label": "Relation to Incident", "placeholder": "Suspect attacked officer.", "required": true }
+                { "type": "text", "name": "name", "label": "Полное имя", "placeholder": "Имя фамилия", "required": true },
+                { "type": "dropdown", "name": "classification", "label": "Статус", "options": ["Жертва", "Подозреваемые", "Свидетель", "Информатор"], "required": true },
+                { "type": "text", "name": "age", "label": "Возраст", "placeholder": "##" },
+                { "type": "text", "name": "phone", "label": "Номер телефона", "placeholder": "#######" },
+                { "type": "text", "name": "residence", "label": "Место жительства", "placeholder": "1000 Grove Street" },
+                { "type": "text", "name": "relation", "label": "Отношение к инциденту", "placeholder": "Подозреваемый напал на офицера.", "required": true }
             ]
         },
-        { "type": "section", "title": "Suspected Crimes" },
+        { "type": "section", "title": "Обвинения" },
         { 
             "type": "charge", 
             "name": "charges",
             "showClass": true
         },
-        { "type": "section", "title": "Incident Details" },
-        { "type": "text", "name": "incident_title", "label": "Incident Title", "placeholder": "Deputy Involved Shooting", "required": true },
-        { "type": "textarea", "name": "narrative", "label": "Narrative", "placeholder": "Enter the detailed account of the incident in first person and in chronological order.", "required": true },
-        { "type": "section", "title": "Evidence" },
+        { "type": "section", "title": "Детали инцидента" },
+        { "type": "text", "name": "incident_title", "label": "Название инцидента", "placeholder": "Помощник шерифа открыл огонь", "required": true },
+        { "type": "textarea", "name": "narrative", "label": "Повествование", "placeholder": "Введите подробный отчет об инциденте от первого лица и в хронологическом порядке.", "required": true },
+        { "type": "section", "title": "Улики" },
         { 
             "type": "input_group",
             "name": "photographs",
-            "label": "Photograph Link(s)",
+            "label": "Фотографии",
             "fields": [
                 {
                     "type": "text",
                     "name": "link",
-                    "label": "Photograph Link",
+                    "label": "Ссылка",
                     "placeholder": "https://i.imgur.com/example.png"
                 }
             ]
@@ -57,13 +57,13 @@
         { 
             "type": "input_group",
             "name": "evidence_descriptions",
-            "label": "Evidence Description(s)",
+            "label": "Описание улик",
             "fields": [
                 {
                     "type": "textarea",
                     "name": "description",
-                    "label": "Description",
-                    "placeholder": "Describe a piece of evidence."
+                    "label": "Описание",
+                    "placeholder": "Опишите суть приложенных вами улик"
                 }
             ]
         }

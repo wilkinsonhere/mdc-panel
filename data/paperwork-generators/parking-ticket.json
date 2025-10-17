@@ -1,6 +1,6 @@
 {
     "id": "parking-ticket",
-    "title": "Нарушение парковки",
+    "title": "Parking Ticket",
     "description": "Сформировать документ о нарушении парковки.",
     "icon": "SquareParking",
     "icon_color": "#1e6da5",
@@ -13,7 +13,7 @@
         { "type": "hidden", "name": "generatorType", "value": "ParkingTicket" },
         { "type": "section", "title": "Основная секция" },
         { "type": "general", "name": "general" },
-        { "type": "section", "title": "Офицер" },
+        { "type": "section", "title": "Сотрудники" },
         { "type": "officer", "name": "officers", "showBadgeNumber": true },
         { "type": "section", "title": "Описание машины" },
         { "type": "group", "fields": [
@@ -29,7 +29,7 @@
           ]
         },
         { "type": "datalist", "name": "vehicle_make_model", "label": "Марка и модель авто", "placeholder": "e.g. Benefactor Dubsta", "optionsSource": "vehicles", "required": true, "defaultValue": "" },
-        { "type": "section", "title": "Детали локации" },
+        { "type": "section", "title": "Локация" },
         { 
             "type": "location", 
             "name": "location", 
@@ -44,7 +44,7 @@
                 {
                     "type": "text",
                     "name": "link",
-                    "label": "Ссылка на фотографию",
+                    "label": "Ссылка",
                     "placeholder": "https://i.imgur.com/example.png"
                 }
             ]
