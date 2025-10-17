@@ -33,8 +33,8 @@ export function MapPage() {
   return (
     <div className="container mx-auto h-full p-4 md:p-6 lg:p-8">
       <PageHeader
-        title="Interactive Map"
-        description="An interactive map of San Andreas."
+        title="Интерактивная карта"
+        description="Интерактивная карта штата San Andreas."
       />
       <div className="h-[calc(100vh-220px)] w-full" style={{ backgroundColor: '#0fa8d2', borderRadius: '0.5rem' }}>
         <MapComponent streets={streets} />

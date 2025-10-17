@@ -4,15 +4,15 @@
         {
             "id": "penal-code",
             "title": "San Andreas Penal Code",
-            "description": "Access the official San Andreas penal code.",
+            "description": "Открыть уголовный кодекс Сан-Андреас.",
             "icon": "BookOpen",
             "type": "link",
             "href": "URL_PENAL_CODE"
         },
         {
             "id": "bail-schedule",
-            "title": "Bail Schedule",
-            "description": "View the official bail and bond schedule.",
+            "title": "Constitution of San Andreas",
+            "description": "Открыть конституцию Сан-Андреас.",
             "icon": "Landmark",
             "type": "link",
             "href": "URL_BAIL_SCHEDULE"
@@ -20,28 +20,28 @@
         {
             "id": "traffic-citations",
             "title": "Traffic Citations",
-            "description": "Review key legal precedents when issuing traffic citations.",
+            "description": "Ознакомьтесь с ключевыми юридическими прецедентами при выдаче справок о дорожном нарушении.",
             "icon": "Car",
             "type": "dialog",
             "content": {
                 "title": "Traffic Citations",
-                "body": "Upon the issuance of a traffic citation, the defendant must be legally informed of their rights and the associated legal process. A signature on the citation is not required, as it only serves to acknowledge receipt and is not an admission of guilt. Citations may also be issued electronically, in which case they are delivered via post to the defendant's registered address.\n\nKey information regarding citations:\n- A citation must be either paid or appealed within twenty-eight (28) days of its issue date. An appeal involves formally contesting the violation in court. **(SA P.C. 1007)**\n- Payment of the citation constitutes a legal admission of guilt, which results in automatic case dismissal if appealed **(SA People v. Wyse)**.\n- Failure to pay or appeal may result in a warrant being issued for the unpaid fine. This authorizes peace officers to seize or impound personal assets to cover the amount owed, and can lead to additional penalties such as a driver's license suspension. **(SA P.C. 1210 & 1211)**"
+                "body": "При выдаче штрафа за нарушение ПДД обвиняемый должен быть юридически проинформирован о своих правах и связанном с этим судебном процессе. Подпись на квитанции не требуется, так как она служит только для подтверждения получения и не является признанием вины. Штрафы также могут выдаваться в электронном виде, в этом случае они доставляются почтой по зарегистрированному адресу обвиняемого.\n\nКлючевая информация относительно штрафов:\n- Штраф должен быть либо оплачен, либо обжалован в течение двадцати восьми (28) дней с даты его выдачи. Обжалование включает в себя официальное оспаривание нарушения в суде. **(SA P.C. 1007)**\n- Оплата штрафа представляет собой юридическое признание вины, что приводит к автоматическому закрытию дела, если оно было обжаловано **(SA People v. Wyse)**.\n- Неуплата или необжалование может привести к выдаче ордера на неоплаченный штраф. Это уполномочивает сотрудников правоохранительных органов на арест или конфискацию личного имущества для покрытия задолженности и может привести к дополнительным штрафным санкциям, таким как приостановление действия водительских прав. **(SA P.C. 1210 & 1211)**"
             }
         },
         {
             "id": "miranda-rights",
             "title": "Miranda Rights",
-            "description": "Before questioning a suspect, they must be read their rights to make their statements admissible in court, as they have to be advised the risk to self-incrimination.",
+            "description": "Перед допросом подозреваемого необходимо ознакомить с его правами, чтобы его показания были приемлемы в суде, поскольку он должен быть предупрежден о риске самооговора.",
             "icon": "ShieldCheck",
             "type": "default",
-            "button_text": "Copy Verbatim Rights",
+            "button_text": "Скопировать",
             "button_action": "copy",
-            "button_content": "You have the right to remain silent. Anything you say may be used against you in a court of law. You have the right to the presence of an attorney during any questioning. If you cannot afford an attorney, one will be appointed for you. Do you understand?"
+            "button_content": "Вы имеете право хранить молчание. Все, что вы скажете, может быть использовано против вас в суде. Вы имеете право на присутствие адвоката во время любого допроса. Если вы не можете позволить себе нанять адвоката, он будет назначен для вас государством. Вы понимаете?"
         },
         {
             "id": "streets-act",
-            "title": "STREETS Act 2024",
-            "description": "Access the official STREETS Act 2024",
+            "title": "The Law on Combating Street Terrorism",
+            "description": "Открыть закон о борьбе с уличной преступностью.",
             "icon": "TrafficCone",
             "type": "link",
             "href": "URL_STREETS"

@@ -12,10 +12,10 @@ const colors = ['#3b82f6', '#ef4444', '#22c55e', '#f97316', '#a855f7', '#ec4899'
 type ToolType = 'marker' | 'polyline' | 'polygon' | 'freedraw' | null;
 
 const DRAW_TOOLS: { type: ToolType; icon: React.ReactNode; title: string }[] = [
-    { type: 'freedraw', icon: <Pencil />, title: 'Free Draw' },
-    { type: 'marker', icon: <MapPin />, title: 'Draw a marker' },
-    { type: 'polyline', icon: <Spline />, title: 'Draw a polyline' },
-    { type: 'polygon', icon: <Hexagon />, title: 'Draw a polygon' },
+    { type: 'freedraw', icon: <Pencil />, title: 'Маркер' },
+    { type: 'marker', icon: <MapPin />, title: 'Точка' },
+    { type: 'polyline', icon: <Spline />, title: 'Линия' },
+    { type: 'polygon', icon: <Hexagon />, title: 'Фигура' },
 ];
 
 const MapDrawControl = () => {
@@ -208,7 +208,7 @@ const MapDrawControl = () => {
 
             uiControls.forEach(control => control.style.display = '');
         }).catch(err => {
-            console.error("Failed to take snapshot:", err);
+            console.error("Ошибка при создании скриншота:", err);
             uiControls.forEach(control => control.style.display = '');
         });
     }, [map]);
@@ -223,10 +223,10 @@ const MapDrawControl = () => {
             L.DomEvent.disableClickPropagation(container);
 
             const actionTools = [
-                { id: 'undo', icon: <Undo />, title: 'Undo', action: undo },
-                { id: 'redo', icon: <Redo />, title: 'Redo', action: redo },
-                { id: 'clear', icon: <Eraser />, title: 'Clear All', action: clearAll },
-                { id: 'snapshot', icon: <Camera />, title: 'Take Snapshot', action: takeSnapshot },
+                { id: 'undo', icon: <Undo />, title: 'Назад', action: undo },
+                { id: 'redo', icon: <Redo />, title: 'Вперед', action: redo },
+                { id: 'clear', icon: <Eraser />, title: 'Очистить', action: clearAll },
+                { id: 'snapshot', icon: <Camera />, title: 'Сделать снимок экрана', action: takeSnapshot },
             ];
 
             const drawContainer = L.DomUtil.create('div', 'leaflet-draw-custom-container', container);

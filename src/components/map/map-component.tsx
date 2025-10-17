@@ -54,7 +54,7 @@ const SearchComponent = ({ streets }: { streets: Street[] }) => {
                 },
                 initial: false,
                 collapsed: false,
-                textPlaceholder: 'Search Street...',
+                textPlaceholder: 'Поиск по улице...',
                 textCancel: ''
             });
 

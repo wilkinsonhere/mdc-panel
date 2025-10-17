@@ -353,7 +353,7 @@ export function PaperworkChargeField({ control, register, watch, penalCode, conf
                     <div className="flex-1 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 items-end">
                         {/* Charge Dropdown */}
                         <div className="space-y-1.5 md:col-span-2">
-                            <Label>Charge</Label>
+                            <Label>Обвинение</Label>
                             <Popover open={openChargeSelector === index} onOpenChange={(isOpen) => setOpenChargeSelector(isOpen ? index : null)}>
                                 <PopoverTrigger asChild>
                                     <Button variant="outline" role="combobox" className="w-full justify-between h-9">
@@ -362,7 +362,7 @@ export function PaperworkChargeField({ control, register, watch, penalCode, conf
                                                 <Badge className={cn('mr-2 rounded-sm px-1.5 py-0.5 text-xs', getTypeClasses(chargeDetails.type))}>{chargeDetails.id}</Badge>
                                                 <span className="truncate">{chargeDetails.charge}</span>
                                             </span>
-                                        ) : 'Select a charge...'}
+                                        ) : 'Выберите из списка...'}
                                         <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
                                     </Button>
                                 </PopoverTrigger>
@@ -423,7 +423,7 @@ export function PaperworkChargeField({ control, register, watch, penalCode, conf
 
                         {config.showOffense && (
                             <div className="space-y-1.5">
-                                <Label>Offense</Label>
+                                <Label>Правонарушение</Label>
                                 <Controller
                                     name={`${config.name}.${index}.offense`}
                                     control={control}
@@ -431,11 +431,11 @@ export function PaperworkChargeField({ control, register, watch, penalCode, conf
                                         <Select value={value || ''} onValueChange={onChange} disabled={!chargeDetails}>
                                             <SelectTrigger className="h-9"><SelectValue placeholder="Select offense" /></SelectTrigger>
                                             <SelectContent>
-                                                <SelectItem value="1" disabled={!chargeDetails?.offence?.['1']}>Offense #1</SelectItem>
-                                                <SelectItem value="2" disabled={!chargeDetails?.offence?.['2']}>Offense #2</SelectItem>
-                                                <SelectItem value="3" disabled={!chargeDetails?.offence?.['3']}>Offense #3</SelectItem>
-                                                <SelectItem value="4" disabled={!chargeDetails?.offence?.['4']}>Offense #4</SelectItem>
-                                                <SelectItem value="5" disabled={!chargeDetails?.offence?.['5']}>Offense #5</SelectItem>
+                                                <SelectItem value="1" disabled={!chargeDetails?.offence?.['1']}>Правонарушение #1</SelectItem>
+                                                <SelectItem value="2" disabled={!chargeDetails?.offence?.['2']}>Правонарушение #2</SelectItem>
+                                                <SelectItem value="3" disabled={!chargeDetails?.offence?.['3']}>Правонарушение #3</SelectItem>
+                                                <SelectItem value="4" disabled={!chargeDetails?.offence?.['4']}>Правонарушение #4</SelectItem>
+                                                <SelectItem value="5" disabled={!chargeDetails?.offence?.['5']}>Правонарушение #5</SelectItem>
                                             </SelectContent>
                                         </Select>
                                     )}

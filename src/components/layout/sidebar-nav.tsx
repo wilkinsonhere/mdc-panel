@@ -62,7 +62,7 @@ export function SidebarNav() {
     setConfig({
       SITE_NAME: 'MDC Panel+',
       SITE_FAVICON: '/img/logos/MDC-Panel-Favicon.svg',
-      URL_GITHUB: 'https://github.com/b00skit/MDC-Panel-plus',
+      URL_GITHUB: 'https://github.com/wilkinsonhere/MDC-Panel-plus',
     });
   }, []);
 
