@@ -1,0 +1,197 @@
+
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+    background-color: hsla(var(--card) / 0.8) !important;
+    color: hsl(var(--card-foreground)) !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    backdrop-filter: blur(4px);
+}
+
+.leaflet-control-zoom-in:hover,
+.leaflet-control-zoom-out:hover {
+    background-color: hsla(var(--accent) / 0.9) !important;
+    color: hsl(var(--accent-foreground)) !important;
+}
+
+.leaflet-bar {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.leaflet-bar a, .leaflet-bar a:hover {
+    border-bottom: none !important;
+}
+
+.leaflet-control-attribution {
+    background-color: hsla(var(--background) / 0.7) !important;
+    color: hsl(var(--foreground)) !important;
+    backdrop-filter: blur(4px);
+    border-radius: 0.25rem;
+}
+.leaflet-control-attribution a {
+    color: hsl(var(--primary)) !important;
+}
+
+
+.leaflet-control-search {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    box-shadow: none !important;
+    backdrop-filter: blur(4px);
+}
+
+.leaflet-control-search.search-exp {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.leaflet-control-search .search-input {
+    background-color: hsla(var(--input) / 0.7) !important;
+    color: hsl(var(--foreground)) !important;
+    border: 1px solid hsl(var(--border)) !important;
+    height: 40px !important;
+    padding: 0 1rem !important;
+    border-radius: 0.375rem !important;
+    transition: all 0.2s;
+    font-family: 'Segoe UI', sans-serif !important;
+    font-size: 14px !important;
+}
+.leaflet-control-search .search-input:focus {
+    border-color: hsl(var(--ring)) !important;
+    box-shadow: none !important;
+}
+
+.leaflet-control-search .search-tooltip {
+    background-color: hsla(var(--popover) / 0.8) !important;
+    border: 1px solid hsl(var(--border)) !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1) !important;
+    margin-top: 0.5rem !important;
+    max-height: 250px !important;
+    backdrop-filter: blur(4px);
+}
+
+.leaflet-control-search .search-tip {
+    color: hsl(var(--popover-foreground)) !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0 !important;
+    font-family: 'Segoe UI', sans-serif !important;
+    background-color: transparent !important;
+}
+
+.leaflet-control-search .search-tip:hover, .leaflet-control-search .search-tip-select {
+    background-color: hsla(var(--accent) / 0.9) !important;
+    color: hsl(var(--accent-foreground)) !important;
+}
+
+.leaflet-control-search .search-cancel {
+    width: 20px !important;
+    height: 20px !important;
+    right: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background-size: 20px 20px !important;
+    background-image: none !important;
+}
+.leaflet-control-search .search-cancel span {
+    font-size: 20px !important;
+    line-height: 20px !important;
+}
+
+/* Draw Controls */
+.leaflet-draw-custom-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+}
+
+.leaflet-draw-action-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.25rem;
+    padding-top: 4px;
+    margin-top: 4px;
+    border-top: 1px solid hsl(var(--border));
+}
+
+.leaflet-custom-draw-controls {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: hsla(var(--card) / 0.8) !important;
+    padding: 8px;
+    border-radius: 0.5rem;
+    backdrop-filter: blur(4px);
+    border: 1px solid hsl(var(--border)) !important;
+    align-items: center;
+}
+
+.leaflet-custom-draw-button {
+    color: hsl(var(--card-foreground));
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 0.25rem;
+}
+
+.leaflet-custom-draw-button svg {
+    width: 16px;
+    height: 16px;
+}
+
+.leaflet-custom-draw-button:hover,
+.leaflet-custom-draw-button.active {
+    background-color: hsla(var(--accent) / 0.9);
+    color: hsl(var(--accent-foreground));
+}
+
+.leaflet-custom-draw-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+
+.leaflet-custom-color-picker {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px;
+    margin-top: 4px;
+    padding-top: 4px;
+    border-top: 1px solid hsl(var(--border));
+}
+
+.leaflet-color-button {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.leaflet-color-button.selected {
+    border-color: hsl(var(--ring));
+    transform: scale(1.1);
+}
+
+.leaflet-draw-toolbar {
+    margin-top: 8px;
+}
+.leaflet-draw-toolbar a {
+    background-color: hsla(var(--card) / 0.8) !important;
+    color: hsl(var(--card-foreground)) !important;
+    border-radius: 0.25rem !important;
+}
+
+.leaflet-draw-toolbar a:hover {
+    background-color: hsla(var(--accent) / 0.9) !important;
+}

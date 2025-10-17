@@ -1,0 +1,9 @@
+
+{
+    "enabled": false,
+    "dismissible": true,
+    "variant": "default",
+    "icon": "Info",
+    "title": "Experimental Feature: Legal Search",
+    "content": "We've released a new Experimental Feature called 'Legal Search', you can enable it in your settings or on the changelog."
+}
